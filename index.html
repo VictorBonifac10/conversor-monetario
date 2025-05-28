@@ -24,8 +24,8 @@
     <main id="main-box">
 
         <div class="text">
-            <h1 id="title">Sustainability that generates</h1>
-            <h3 id="subtitle">Save with clean and conscious energy</h3>
+            <h1 id="title">Convert your money now!</h1>
+            <h3 id="subtitle">be it dollar, euro or pounds, do it yourself</h3>
             <p id="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, sequi? Modi
                 exercitationem praesentium asperiores est. Dolor tempora illo et, iusto cum sit sed eveniet enim
                 delectus cumque beatae eaque. Animi.</p>
@@ -33,19 +33,20 @@
 
         <div class="forms">
             <label class="titulo-form" for="#">Converter <b>de</b><br>
-                <select name="#" id="select">
-                    <option value="#">R$ Real brasileiro</option>
+                <select id="select-real">
+                    <option>R$ Real brasileiro</option>
                 </select>
             </label><br>
-            <label class="titulo-form"  for="#">Converter <b>para</b><br>
-                <select name="#" id="select">
-                    <option value="#">US$ Dollar Americano</option>
-                    <option value="#">€ Euro</option>
-                    <option value="#">£ Libra</option>
+            <label class="titulo-form" for="#">Converter <b>para</b><br>
+                <select id="select">
+                    <option value="dollar">US$ Dollar Americano</option>
+                    <option value="euro">€ Euro</option>
+                    <option value="libra">£ Libra</option>
+                    <option value="bitcoin">₿ Bitcoin</option>
                 </select>
             </label><br>
-            <label  class="titulo-form"  for="#">Valor
-                <input placeholder="R$10.000,00">
+            <label class="titulo-form" for="#">Valor
+                <input class="money" type="number" placeholder="R$10.000,00">
             </label>
             <br>
             <button class="convert">Converter</button>
@@ -54,20 +55,19 @@
                 <div class="brazil-flag">
                     <img src="./assets/img/real.png" class="moeda" alt="real">
                     <p><b>Real</b></p>
-                    <p>R$0,00</p>
+                    <p class="real">R$0,00</p>
                 </div>
 
                 <img src="./assets/img/seta.png" class="arrow" alt="seta">
 
                 <div class="another-flag">
-                    <img src="./assets/img/dollar.png" class="moeda" alt="real">
-                    <p><b>Dollar</b></p>
-                    <p>US$0.00</p>
+                    <img src="./assets/img/dollar.png" class="moeda moedaAbroad" alt="real">
+                    <p class="coin-name"><b>Dollar</b></p>
+                    <p class="abrod-coin">$0.00</p>
                 </div>
             </section>
         </div>
     </main>
-
 </body>
-
+<script src="./js/script.js"></script>
 </html>
