@@ -9,6 +9,9 @@ box-sizing: border-box;
 
 body{
     background: linear-gradient(to top, #ecc3ff, #f6ebff, #ffffff);
+    background-repeat: no-repeat;
+    background-attachment: fixed;/*mantém o gradiente fixo na tela mesmo com scroll.*/
+    background-size: cover; /*garante que ele ocupe toda a área disponível sem se repetir.*/
 }
 
 header{
@@ -20,7 +23,7 @@ header{
 }
 
 .link-header{
-    font-weight: 600;
+    font-weight: 600; 
     font-size: 17px;
     color:#813dda;
     margin-right: 20px;

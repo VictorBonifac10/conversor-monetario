@@ -1,0 +1,33 @@
+@media screen and (max-width: 1130px) {
+
+    main {
+        display: block;
+    }
+
+    .text {
+        display: block;
+        margin: 0px auto;
+        margin-bottom: 20px;
+    }
+
+    #title, #subtitle{
+        text-align: center;
+    }
+
+    #paragraph {
+        display: none;
+    }
+
+    .forms {
+        display: block;
+        margin: 0px auto;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    .link-header {
+        display: none;
+    }
+}
