@@ -5,14 +5,16 @@ const imgCoin = document.querySelector(".moedaAbroad")
 const coinName = document.querySelector(".coin-name")
 const selectOptionElement = document.querySelector("#select") // ⬅️ capturando o elemento
 
-function convertMoney() {
+
+async function convertMoney() {
     const inputMoney = document.querySelector(".money").value
     const selectOption = selectOptionElement.value // ⬅️ capturando o valor atualizado
 
-    const dolarToday = 5.70
-    const euroToday = 6.20
-    const poundsToday = 7.00
-    const bitcoinToday = 350000
+    const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then(response => response.json())
+
+    const dolarToday = data.USDBRL.high
+    const euroToday = data.EURBRL.high
+    const bitcoinToday = data.BTCBRL.high
 
     realCoin.innerHTML = new Intl.NumberFormat("pt-BR", {
         style: "currency",
@@ -33,13 +35,6 @@ function convertMoney() {
         }).format(inputMoney / euroToday)
     }
 
-    if (selectOption === "libra") {
-        convertCoin.innerHTML = new Intl.NumberFormat("en-GB", {
-            style: "currency",
-            currency: "GBP"
-        }).format(inputMoney / poundsToday)
-    }
-
     if (selectOption === "bitcoin") {
         convertCoin.innerHTML = (inputMoney / bitcoinToday).toFixed(6) + " BTC"
     }
@@ -55,10 +50,6 @@ function coinTrade() {
     if (selectOptionElement.value == "euro") {
         imgCoin.src = "./assets/img/euro.png"
         coinName.innerHTML = "<b>Euro</b>"
-    }
-    if (selectOptionElement.value == "libra") {
-        imgCoin.src = "./assets/img/libra.png"
-        coinName.innerHTML = "<b>Libra</b>"
     }
     if (selectOptionElement.value == "bitcoin") {
         imgCoin.src = "./assets/img/bitcoin.png"
