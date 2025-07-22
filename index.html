@@ -5,69 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/responsive.css">
     <title>Conversor Monetário</title>
 </head>
 
 <body>
+    <div class="forms">
+        <label class="titulo-form" for="#">Converter <b>de</b><br>
+            <select id="select-real">
+                <option>R$ Real brasileiro</option>
+            </select>
+        </label><br>
+        <label class="titulo-form" for="#">Converter <b>para</b><br>
+            <select id="select">
+                <option value="dollar">US$ Dollar Americano</option>
+                <option value="euro">€ Euro</option>
+                <option value="bitcoin">₿ Bitcoin</option>
+            </select>
+        </label><br>
+        <label class="titulo-form" for="#">Valor
+            <input class="money" type="number" placeholder="R$10.000,00">
+        </label>
+        <br>
+        <button class="convert">Converter</button>
 
-    <header id="introduction">
-        <img src="./assets/img/logo.gif" alt="logo" id="logo" width="90px">
-        <div id="link-header-box">
-            <a href="#" class="link-header">Home</a>
-            <a href="#" class="link-header">About</a>
-            <a href="#" class="link-header">Products</a>
-            <a href="#" class="link-header">Contact</a>
+        <section>
+            <div class="brazil-flag">
+                <img src="./assets/img/real.png" class="moeda" alt="real">
+                <p><b>Real</b></p>
+                <p class="real">R$0,00</p>
+            </div>
 
-            <button id="account">My Account</button>
-        </div>
-    </header>
-    <main id="main-box">
+            <img src="./assets/img/seta.png" class="arrow" alt="seta">
 
-        <div class="text">
-            <h1 id="title">Convert your money now!</h1>
-            <h3 id="subtitle">be it dollar, euro or pounds, do it yourself</h3>
-            <p id="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, sequi? Modi
-                exercitationem praesentium asperiores est. Dolor tempora illo et, iusto cum sit sed eveniet enim
-                delectus cumque beatae eaque. Animi.</p>
-        </div>
-
-        <div class="forms">
-            <label class="titulo-form" for="#">Converter <b>de</b><br>
-                <select id="select-real">
-                    <option>R$ Real brasileiro</option>
-                </select>
-            </label><br>
-            <label class="titulo-form" for="#">Converter <b>para</b><br>
-                <select id="select">
-                    <option value="dollar">US$ Dollar Americano</option>
-                    <option value="euro">€ Euro</option>
-                    <option value="bitcoin">₿ Bitcoin</option>
-                </select>
-            </label><br>
-            <label class="titulo-form" for="#">Valor
-                <input class="money" type="number" placeholder="R$10.000,00">
-            </label>
-            <br>
-            <button class="convert">Converter</button>
-
-            <section>
-                <div class="brazil-flag">
-                    <img src="./assets/img/real.png" class="moeda" alt="real">
-                    <p><b>Real</b></p>
-                    <p class="real">R$0,00</p>
-                </div>
-
-                <img src="./assets/img/seta.png" class="arrow" alt="seta">
-
-                <div class="another-flag">
-                    <img src="./assets/img/dollar.png" class="moeda moedaAbroad" alt="real">
-                    <p class="coin-name"><b>Dollar</b></p>
-                    <p class="abrod-coin">$0.00</p>
-                </div>
-            </section>
-        </div>
-    </main>
+            <div class="another-flag">
+                <img src="./assets/img/dollar.png" class="moeda moedaAbroad" alt="real">
+                <p class="coin-name"><b>Dollar</b></p>
+                <p class="abrod-coin">$0.00</p>
+            </div>
+        </section>
+    </div>
 </body>
 <script src="./js/script.js"></script>
+
 </html>
